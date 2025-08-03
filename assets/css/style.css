@@ -1,0 +1,239 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  transition: background 0.4s ease, color 0.4s ease;
+  padding-bottom: 3rem;
+}
+
+.light {
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  color: #1a1a1a;
+}
+
+.dark {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+/* Glass Effect Container */
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  width: 90%;
+  transition: all 0.4s ease;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.8rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  color: inherit;
+  transition: transform 0.3s;
+}
+#theme-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding-top: 3rem;
+}
+.highlight {
+  color: teal;
+  font-weight: 700;
+}
+.subtitle {
+  margin-top: 0.6rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+.buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: teal;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.btn:hover {
+  background: #007777;
+  transform: scale(1.05);
+}
+.btn.secondary {
+  background: transparent;
+  border: 2px solid teal;
+  color: teal;
+}
+.btn.secondary:hover {
+  background: teal;
+  color: white;
+}
+
+/* Section Titles */
+.section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: teal;
+  text-align: center;
+  position: relative;
+}
+.section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: teal;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Paragraphs */
+.section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.skills-list li {
+  background: teal;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skills-list li:hover {
+  transform: scale(1.07);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.project-card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+.project-card a {
+  color: teal;
+  font-weight: 600;
+  text-decoration: none;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Links */
+#contact {
+  text-align: center;
+}
+#contact a {
+  color: teal;
+  font-weight: 500;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .glass {
+    padding: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+  }
+
+  .project-card {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .skills-list li {
+    font-size: 0.8rem;
+    padding: 8px 14px;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    margin: 6px 0;
+  }
+
+  #theme-toggle {
+    font-size: 1.4rem;
+  }
+}
